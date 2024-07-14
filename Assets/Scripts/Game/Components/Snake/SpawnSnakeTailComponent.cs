@@ -1,6 +1,6 @@
 ﻿using Unity.Entities;
 
-namespace Game.Components
+namespace Game.Components.Snake
 {
     public struct SpawnSnakeTailComponent : IComponentData
     {

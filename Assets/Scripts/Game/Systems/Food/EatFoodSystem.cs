@@ -1,12 +1,14 @@
-﻿using Game.Components;
+﻿using Game.Components.Food;
+using Game.Components.Snake;
 using Unity.Burst;
 using Unity.Collections;
 using Unity.Entities;
 using Unity.Mathematics;
 using Unity.Transforms;
 
-namespace Game.Systems
+namespace Game.Systems.Food
 {
+    [BurstCompile]
     public partial struct EatFoodSystem : ISystem
     {
         [BurstCompile]
@@ -53,7 +55,6 @@ namespace Game.Systems
             }
         }
 
-        [BurstCompile]
         private void CreateSpawnFoodEntity(
             ref SystemState state)
         {
@@ -62,7 +63,6 @@ namespace Game.Systems
             state.EntityManager.AddComponent<SpawnFoodComponent>(spawnFoodEntity);
         }
 
-        [BurstCompile]
         private void CreateSpawnSnakeTailEntity(
             ref SystemState state,
             Entity headEntity)

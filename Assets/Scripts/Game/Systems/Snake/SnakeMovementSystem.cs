@@ -1,15 +1,17 @@
-﻿using Game.Bakers;
-using Game.Components;
+﻿using Game.Components.Food;
+using Game.Components.Snake;
 using Unity.Burst;
 using Unity.Collections;
 using Unity.Entities;
 using Unity.Mathematics;
 using Unity.Transforms;
 
-namespace Game.Systems
+namespace Game.Systems.Snake
 {
+    [BurstCompile]
     public partial struct SnakeMovementSystem : ISystem
     {
+        [BurstCompile]
         public void OnCreate(
             ref SystemState state)
         {

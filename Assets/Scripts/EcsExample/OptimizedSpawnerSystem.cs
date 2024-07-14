@@ -2,7 +2,7 @@ using Unity.Burst;
 using Unity.Entities;
 using Unity.Mathematics;
 
-namespace Game
+namespace EcsExample
 {
     [BurstCompile]
     public partial struct OptimizedSpawnerSystem : ISystem

@@ -3,7 +3,7 @@ using Unity.Entities;
 using Unity.Mathematics;
 using Unity.Transforms;
 
-namespace Game
+namespace EcsExample
 {
     [BurstCompile]
     public partial struct ProcessSpawnerJob : IJobEntity

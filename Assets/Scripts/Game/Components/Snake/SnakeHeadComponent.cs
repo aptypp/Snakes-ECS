@@ -1,7 +1,7 @@
 ﻿using Unity.Collections;
 using Unity.Entities;
 
-namespace Game.Components
+namespace Game.Components.Snake
 {
     public struct SnakeHeadComponent : IComponentData
     {

@@ -1,7 +1,8 @@
-﻿using Unity.Entities;
+﻿using Game.Components.Snake;
+using Unity.Entities;
 using UnityEngine;
 
-namespace Game.Bakers
+namespace Game.Authorings
 {
     public class SnakeSpawnerComponentAuthoring : MonoBehaviour
     {

@@ -1,7 +1,7 @@
 using Unity.Entities;
 using Unity.Mathematics;
 
-namespace Game
+namespace EcsExample
 {
     public struct Spawner : IComponentData
     {

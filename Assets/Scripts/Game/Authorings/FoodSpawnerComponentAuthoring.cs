@@ -1,7 +1,8 @@
-﻿using Unity.Entities;
+﻿using Game.Components.Food;
+using Unity.Entities;
 using UnityEngine;
 
-namespace Game.Components
+namespace Game.Authorings
 {
     public class FoodSpawnerComponentAuthoring : MonoBehaviour
     {

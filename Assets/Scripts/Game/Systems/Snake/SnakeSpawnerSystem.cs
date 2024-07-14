@@ -1,13 +1,14 @@
-﻿using Game.Bakers;
-using Game.Components;
+﻿using Game.Components.Food;
+using Game.Components.Snake;
 using Unity.Burst;
 using Unity.Collections;
 using Unity.Entities;
 using Unity.Mathematics;
 using Unity.Transforms;
 
-namespace Game.Systems
+namespace Game.Systems.Snake
 {
+    [BurstCompile]
     public partial struct SnakeSpawnerSystem : ISystem
     {
         private Random _random;
@@ -24,6 +25,7 @@ namespace Game.Systems
             CreateSpawnAllSnakesEntity(ref state);
         }
 
+        [BurstCompile]
         public void OnUpdate(
             ref SystemState state)
         {
@@ -162,7 +164,6 @@ namespace Game.Systems
                 snakeHeadComponent);
         }
 
-        [BurstCompile]
         private void CreateSpawnAllSnakesEntity(
             ref SystemState state)
         {
@@ -170,7 +171,6 @@ namespace Game.Systems
             state.EntityManager.AddComponent<SpawnAllSnakesComponent>(entity);
         }
 
-        [BurstCompile]
         private void CreateSpawnSnakeEntity(
             ref SystemState state)
         {

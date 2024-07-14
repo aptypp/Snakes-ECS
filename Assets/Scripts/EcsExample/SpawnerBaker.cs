@@ -1,6 +1,6 @@
 using Unity.Entities;
 
-namespace Game
+namespace EcsExample
 {
     internal class SpawnerBaker : Baker<SpawnerAuthoring>
     {

@@ -1,12 +1,11 @@
-﻿using Game.Components;
-using PlasticGui.Configuration;
+﻿using Game.Components.Food;
 using Unity.Burst;
 using Unity.Collections;
 using Unity.Entities;
 using Unity.Mathematics;
 using Unity.Transforms;
 
-namespace Game.Systems
+namespace Game.Systems.Food
 {
     [BurstCompile]
     public partial struct FoodSpawnerSystem : ISystem
@@ -64,7 +63,6 @@ namespace Game.Systems
             spawnFoodEntities.Dispose();
         }
 
-        [BurstCompile]
         private void SpawnFood(
             ref SystemState state,
             ref FoodSpawnerComponent foodSpawnerComponent)
@@ -86,7 +84,6 @@ namespace Game.Systems
             state.EntityManager.AddComponent<FoodComponent>(food);
         }
 
-        [BurstCompile]
         private void CreateSpawnFoodEntity(
             ref SystemState state)
         {
@@ -95,7 +92,6 @@ namespace Game.Systems
             state.EntityManager.AddComponent<SpawnFoodComponent>(entity);
         }
 
-        [BurstCompile]
         private void CreateSpawnAllFoodEntity(
             ref SystemState state)
         {
